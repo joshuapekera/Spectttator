@@ -39,5 +39,6 @@
                                       ))block;
 
 + (id)dataFromUrl:(NSURL *)url;
++ (id)jsonDataFromUrl:(NSURL *)url;
 
 @end

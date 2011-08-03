@@ -49,7 +49,7 @@
               runOnMainThread:(BOOL)runOnMainThread 
                     withBlock:(void (^)(NSArray *, SPPagination *))block{
     [[SPMethods operationQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
-        NSDictionary *json = [SPMethods dataFromUrl:url];
+        NSDictionary *json = [SPMethods jsonDataFromUrl:url];
         NSArray *players = [json objectForKey:@"players"];
         NSMutableArray *mplayers = [[NSMutableArray alloc] initWithCapacity:[players count]];
         NSAutoreleasePool *pool =  [[NSAutoreleasePool alloc] init];
@@ -74,7 +74,7 @@
             runOnMainThread:(BOOL)runOnMainThread 
                   withBlock:(void (^)(NSArray *, SPPagination *))block{
     [[SPMethods operationQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
-        NSDictionary *json = [SPMethods dataFromUrl:url];
+        NSDictionary *json = [SPMethods jsonDataFromUrl:url];
         NSArray *shots = [json objectForKey:@"shots"];
         NSMutableArray *mshots = [[NSMutableArray alloc] initWithCapacity:[shots count]];
         NSAutoreleasePool *pool =  [[NSAutoreleasePool alloc] init];
@@ -99,7 +99,7 @@
             runOnMainThread:(BOOL)runOnMainThread 
                   withBlock:(void (^)(NSArray *, SPPagination *))block{
     [[SPMethods operationQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
-        NSDictionary *json = [SPMethods dataFromUrl:url];
+        NSDictionary *json = [SPMethods jsonDataFromUrl:url];
         NSArray *comments = [json objectForKey:@"comments"];
         NSMutableArray *mcomments = [[NSMutableArray alloc] initWithCapacity:[comments count]];
         NSAutoreleasePool *pool =  [[NSAutoreleasePool alloc] init];
@@ -155,7 +155,11 @@
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    
+    return data;
+}
+
++ (id)jsonDataFromUrl:(NSURL *)url{
+    NSData *data = [self dataFromUrl:url];
     return [[self parser] objectWithData:data];
 }
 
