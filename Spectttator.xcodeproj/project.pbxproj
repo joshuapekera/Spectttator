@@ -21,7 +21,7 @@
 		7316996D13B89753003F6E05 /* SBJsonStreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7316995413B89753003F6E05 /* SBJsonStreamParserState.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7316996E13B89753003F6E05 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316995513B89753003F6E05 /* SBJsonStreamParserState.m */; };
 		7316996F13B89753003F6E05 /* SBJsonStreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7316995613B89753003F6E05 /* SBJsonStreamWriter.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7316997013B89753003F6E05 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316995713B89753003F6E05 /* SBJsonStreamWriter.m */; };
+		7316997013B89753003F6E05 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316995713B89753003F6E05 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7316997113B89753003F6E05 /* SBJsonStreamWriterAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7316995813B89753003F6E05 /* SBJsonStreamWriterAccumulator.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7316997213B89753003F6E05 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316995913B89753003F6E05 /* SBJsonStreamWriterAccumulator.m */; };
 		7316997313B89753003F6E05 /* SBJsonStreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7316995A13B89753003F6E05 /* SBJsonStreamWriterState.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -361,6 +361,7 @@
 		73698B6413B681F400922D1A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "InScopeApps {+}";
 			};
 			buildConfigurationList = 73698B6713B681F400922D1A /* Build configuration list for PBXProject "Spectttator" */;
